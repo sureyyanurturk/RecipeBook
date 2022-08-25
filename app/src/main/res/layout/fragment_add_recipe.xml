@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddRecipeFragment">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/addRecipeImg"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/profile_placeholder"
+            android:scaleType="fitXY"
+            android:onClick="addImgClick"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent"/>
+
+        <EditText
+            android:id="@+id/addRecipeFName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addRecipeImg"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:hint="Yemek ismini giriniz."
+            android:padding="10dp"
+            android:textColorHighlight="@color/blue"
+            android:textColorHint="@color/grey"
+            android:textCursorDrawable="@color/blue"
+            android:background="@drawable/edittext_bg"
+            />
+        <EditText
+            android:id="@+id/addRecipeFKind"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addRecipeFName"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:hint="Yemek türünü giriniz."
+            android:padding="10dp"
+            android:textColorHighlight="@color/blue"
+            android:textColorHint="@color/grey"
+            android:textCursorDrawable="@color/blue"
+            android:background="@drawable/edittext_bg"
+            />
+        <EditText
+            android:id="@+id/addRecipeFMaterials"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addRecipeFKind"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:hint="Yemek malzemelerini giriniz."
+            android:padding="10dp"
+            android:textColorHighlight="@color/blue"
+            android:textColorHint="@color/grey"
+            android:textCursorDrawable="@color/blue"
+            android:background="@drawable/edittext_bg"/>
+
+        <Button
+            android:id="@+id/addRecipeBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="20dp"
+            android:text="Add Recipe"
+            android:textAllCaps="false"
+            android:background="@drawable/add_btn_rounded"
+            android:onClick="addBtnClick"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
